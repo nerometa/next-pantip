@@ -134,7 +134,7 @@ export default function Layout(props: { children: React.ReactNode }) {
         </Dropdown>
       }
     >
-      <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
+      <div className="py-5">{props.children}</div>
     </BaseTemplate>
   );
 }

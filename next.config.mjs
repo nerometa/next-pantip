@@ -34,6 +34,16 @@ export default withSentryConfig(
 
         return config;
       },
+      images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'ptcdn.info',
+            port: '',
+            pathname: '/home_highlight/**',
+          },
+        ],
+      },
     }),
   ),
   {
