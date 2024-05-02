@@ -10,7 +10,7 @@ const Highlights = () => {
   const highlights = useGetHighlightsQuery();
 
   return (
-    <section id="highlight">
+    <section id="highlight" className="mb-16">
       <h2 className="mb-8 text-2xl font-bold">{t('highlights_title')}</h2>
       <div className="flex flex-nowrap items-start gap-8 overflow-x-scroll">
         {highlights.currentData?.data.map((item) => (
@@ -26,6 +26,7 @@ const Highlights = () => {
                 alt={item.name}
                 width={400}
                 height={300}
+                priority
               />
             </div>
             <p className="my-4 line-clamp-3 font-semibold">{item.name}</p>

@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import Highlights from '@/components/Highlights';
+import RecommendedRooms from '@/components/RecommendedRooms';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
@@ -15,5 +16,10 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 }
 
 export default function Index() {
-  return <Highlights />;
+  return (
+    <>
+      <Highlights />
+      <RecommendedRooms />
+    </>
+  );
 }

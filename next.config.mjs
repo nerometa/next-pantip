@@ -42,6 +42,12 @@ export default withSentryConfig(
             port: '',
             pathname: '/home_highlight/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'ptcdn.info',
+            port: '',
+            pathname: '/mobile/icon_room/**',
+          },
         ],
       },
     }),
