@@ -1,5 +1,4 @@
 import { Button } from '@mui/base/Button';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { BaseTemplate } from '@/templates/BaseTemplate';
@@ -11,14 +10,6 @@ export default function Layout(props: { children: React.ReactNode }) {
     <BaseTemplate
       leftNav={
         <>
-          <li>
-            <Link
-              href="/"
-              className="border-none text-gray-800 hover:text-black"
-            >
-              {t('home_link')}
-            </Link>
-          </li>
           <li>
             <a
               href="https://pantip.com/home/communities"
@@ -59,7 +50,7 @@ export default function Layout(props: { children: React.ReactNode }) {
           <li>
             <Button
               href="https://pantip.com/register/email"
-              className=" rounded-md bg-violet-700 px-4 py-1 text-gray-300 hover:bg-violet-800 hover:text-white"
+              className=" rounded-md bg-violet-700 px-4 py-2 font-bold text-gray-300 hover:bg-violet-800 hover:text-white"
             >
               {t('sign_up_link')}
             </Button>

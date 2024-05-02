@@ -13,13 +13,22 @@ const BaseTemplate = (props: {
   return (
     <div className="w-full px-8 antialiased">
       <div className="mx-auto">
-        <header className="border-b border-gray-300">
+        <header className="border-b border-gray-300 py-4">
           <div className="flex items-center justify-between">
-            <Image width={80} height={0} src="/pantip-logo.png" alt="Pantip" />
+            <section id="main-nav" className="flex items-center">
+              <a href="/">
+                <Image
+                  width={80}
+                  height={0}
+                  src="/pantip-logo.png"
+                  alt="Pantip"
+                />
+              </a>
 
-            <nav>
-              <ul className="flex flex-wrap gap-x-5">{props.leftNav}</ul>
-            </nav>
+              <nav className="ml-8">
+                <ul className="flex flex-wrap gap-x-5">{props.leftNav}</ul>
+              </nav>
+            </section>
 
             <nav>
               <ul className="flex flex-wrap gap-x-5">{props.rightNav}</ul>

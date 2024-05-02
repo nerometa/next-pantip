@@ -1,7 +1,7 @@
 import '@/styles/global.css';
 
-import { Anuphan } from '@next/font/google';
 import type { Metadata } from 'next';
+import { Anuphan } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
