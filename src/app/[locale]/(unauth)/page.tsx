@@ -15,7 +15,7 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 export default function Index() {
   return (
     <>
-      <p>Hello World! สวัสดีชาวโลก</p>
+      <h2>Highlights</h2>
       {/* <p>
         Explore our GitHub project for more information about{' '}
         <a

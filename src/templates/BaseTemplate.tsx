@@ -6,12 +6,13 @@ import { AppConfig } from '@/utils/AppConfig';
 const BaseTemplate = (props: {
   leftNav: React.ReactNode;
   rightNav?: React.ReactNode;
+  mobileNav: React.ReactNode;
   children: React.ReactNode;
 }) => {
   const t = useTranslations('BaseTemplate');
 
   return (
-    <div className="w-full px-8 antialiased">
+    <div className="w-full px-4 antialiased sm:px-8">
       <div className="mx-auto">
         <header className="border-b border-gray-300 py-4">
           <div className="flex items-center justify-between">
@@ -25,13 +26,19 @@ const BaseTemplate = (props: {
                 />
               </a>
 
-              <nav className="ml-8">
+              <nav className="ml-8 hidden sm:block">
                 <ul className="flex flex-wrap gap-x-5">{props.leftNav}</ul>
               </nav>
             </section>
 
-            <nav>
-              <ul className="flex flex-wrap gap-x-5">{props.rightNav}</ul>
+            <nav className="hidden sm:block">
+              <ul className="flex flex-wrap items-center gap-x-5">
+                {props.rightNav}
+              </ul>
+            </nav>
+
+            <nav id="mobile-nav" className="sm:hidden">
+              {props.mobileNav}
             </nav>
           </div>
         </header>

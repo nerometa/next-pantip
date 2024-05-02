@@ -1,3 +1,7 @@
+import { Dropdown } from '@mui/base/Dropdown';
+import { Menu } from '@mui/base/Menu';
+import { MenuButton } from '@mui/base/MenuButton';
+import { MenuItem } from '@mui/base/MenuItem';
 import { render, screen, within } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 
@@ -18,6 +22,16 @@ describe('Base template', () => {
                 <li>link 3</li>
               </>
             }
+            mobileNav={
+              <Dropdown>
+                <MenuButton>nav</MenuButton>
+                <Menu>
+                  <MenuItem>item 1</MenuItem>
+                  <MenuItem>item 2</MenuItem>
+                  <MenuItem>item 3</MenuItem>
+                </Menu>
+              </Dropdown>
+            }
           >
             {null}
           </BaseTemplate>
@@ -32,7 +46,19 @@ describe('Base template', () => {
     it('should have a link to support creativedesignsguru.com', () => {
       render(
         <NextIntlClientProvider locale="en" messages={messages}>
-          <BaseTemplate leftNav={<li>1</li>}>{null}</BaseTemplate>
+          <BaseTemplate
+            leftNav={<li>1</li>}
+            mobileNav={
+              <Dropdown>
+                <MenuButton>nav</MenuButton>
+                <Menu>
+                  <MenuItem>item 1</MenuItem>
+                </Menu>
+              </Dropdown>
+            }
+          >
+            {null}
+          </BaseTemplate>
         </NextIntlClientProvider>,
       );
 

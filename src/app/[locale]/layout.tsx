@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const anuphan = Anuphan({ subsets: ['latin', 'thai'] });
+const anuphan = Anuphan({ subsets: ['latin', 'thai'], display: 'swap' });
 
 export default function RootLayout(props: {
   children: React.ReactNode;
