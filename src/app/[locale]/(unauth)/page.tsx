@@ -1,5 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
+import Highlights from '@/components/Highlights';
+
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
     locale: props.params.locale,
@@ -15,7 +17,8 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 export default function Index() {
   return (
     <>
-      <h2>Highlights</h2>
+      <div>Hey</div>
+      <Highlights />
       {/* <p>
         Explore our GitHub project for more information about{' '}
         <a

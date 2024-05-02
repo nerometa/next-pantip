@@ -5,6 +5,7 @@ import { Anuphan } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
+import { ReduxProvider } from '@/libs/redux/ReduxProvider';
 import { AppConfig } from '@/utils/AppConfig';
 
 export const metadata: Metadata = {
@@ -46,14 +47,16 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <body className={anuphan.className}>
-        <NextIntlClientProvider
-          locale={props.params.locale}
-          messages={messages}
-        >
-          {props.children}
-        </NextIntlClientProvider>
-      </body>
+      <ReduxProvider>
+        <body className={anuphan.className}>
+          <NextIntlClientProvider
+            locale={props.params.locale}
+            messages={messages}
+          >
+            {props.children}
+          </NextIntlClientProvider>
+        </body>
+      </ReduxProvider>
     </html>
   );
 }
