@@ -66,5 +66,11 @@
     "dashboard_link": "Dashboard",
     "user_profile_link": "Manage your account",
     "sign_out": "Sign out"
+  },
+  "Highlights": {
+    "highlights_title": "Highlights"
+  },
+  "RecommendedRooms": {
+    "recommended_rooms_title": "เลือกห้อง"
   }
 }

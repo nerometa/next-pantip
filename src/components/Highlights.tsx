@@ -1,15 +1,17 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { useGetHighlightsQuery } from '@/libs/redux/features/home/homeSlice';
 
 const Highlights = () => {
+  const t = useTranslations('Highlights');
   const highlights = useGetHighlightsQuery();
 
   return (
     <section id="highlight">
-      <h2 className="mb-8 text-2xl font-bold">Highlights</h2>
+      <h2 className="mb-8 text-2xl font-bold">{t('highlights_title')}</h2>
       <div className="flex flex-nowrap items-start gap-8 overflow-x-scroll">
         {highlights.currentData?.data.map((item) => (
           <a
