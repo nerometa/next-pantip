@@ -9,7 +9,18 @@
   },
   "BaseTemplate": {
     "description": "Starter code for your Nextjs Boilerplate with Tailwind CSS",
-    "made_with": "Made with"
+    "made_with": "Made with",
+    "about_us": "เกี่ยวกับเรา",
+    "contact_us": "ติดต่อเรา",
+    "terms_of_service": "กฎ กติกาและมารยาท",
+    "posts_instruction": "คำแนะนำการโพสต์",
+    "privacy": "นโยบายเกี่ยวกับข้อมูลส่วนบุคคล",
+    "members_privilege": "สิทธิ์การใช้งานของสมาชิก",
+    "contact": "ติดต่อทีมงาน Pantip",
+    "advertising": "ติดต่อลงโฆษณา",
+    "work_with_pantip": "ร่วมงานกับ Pantip",
+    "download_pantip_app": "Download App Pantip",
+    "pantip_certified_developer": "Pantip Certified Developer"
   },
   "Index": {
     "meta_title": "Next.js Boilerplate Presentation",
