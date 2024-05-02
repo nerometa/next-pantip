@@ -1,5 +1,6 @@
 import '@/styles/global.css';
 
+import { Anuphan } from '@next/font/google';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
@@ -31,6 +32,8 @@ export const metadata: Metadata = {
   ],
 };
 
+const anuphan = Anuphan({ subsets: ['latin', 'thai'] });
+
 export default function RootLayout(props: {
   children: React.ReactNode;
   params: { locale: string };
@@ -43,7 +46,7 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <body>
+      <body className={anuphan.className}>
         <NextIntlClientProvider
           locale={props.params.locale}
           messages={messages}

@@ -1,11 +1,11 @@
 {
   "RootLayout": {
-    "home_link": "Home",
-    "about_link": "About",
-    "guestbook_link": "Guestbook",
-    "portfolio_link": "Portfolio",
-    "sign_in_link": "Sign in",
-    "sign_up_link": "Sign up"
+    "home_link": "หน้าหลัก",
+    "sign_in_link": "เข้าสู่ระบบ",
+    "sign_up_link": "สมัครสมาชิก",
+    "explore_link": "สำรวจ",
+    "my_feed_link": "ฟีดของฉัน",
+    "pantip_point_link": "Pantip Point"
   },
   "BaseTemplate": {
     "description": "Starter code for your Nextjs Boilerplate with Tailwind CSS",

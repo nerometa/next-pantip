@@ -1,7 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 
-import { Sponsors } from '@/components/Sponsors';
-
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
     locale: props.params.locale,
@@ -17,7 +15,8 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 export default function Index() {
   return (
     <>
-      <p>
+      <p>Hello World! สวัสดีชาวโลก</p>
+      {/* <p>
         Explore our GitHub project for more information about{' '}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
@@ -100,7 +99,7 @@ export default function Index() {
           Checkly
         </a>
         , Storybook, Multi-language (i18n), and more.
-      </p>
+      </p> */}
     </>
   );
 }

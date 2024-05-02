@@ -1,7 +1,7 @@
+import { Button } from '@mui/base/Button';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import LocaleSwitcher from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
 export default function Layout(props: { children: React.ReactNode }) {
@@ -14,41 +14,33 @@ export default function Layout(props: { children: React.ReactNode }) {
           <li>
             <Link
               href="/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="border-none text-gray-800 hover:text-black"
             >
               {t('home_link')}
             </Link>
           </li>
           <li>
-            <Link
-              href="/about/"
-              className="border-none text-gray-700 hover:text-gray-900"
+            <a
+              href="https://pantip.com/home/communities"
+              className="border-none text-gray-800 hover:text-black"
             >
-              {t('about_link')}
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/guestbook/"
-              className="border-none text-gray-700 hover:text-gray-900"
-            >
-              {t('guestbook_link')}
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/portfolio/"
-              className="border-none text-gray-700 hover:text-gray-900"
-            >
-              {t('portfolio_link')}
-            </Link>
+              {t('explore_link')}
+            </a>
           </li>
           <li>
             <a
-              className="border-none text-gray-700 hover:text-gray-900"
-              href="https://github.com/ixartz/Next-js-Boilerplate"
+              href="https://pantip.com/home/feed"
+              className="border-none text-gray-800 hover:text-black"
             >
-              GitHub
+              {t('my_feed_link')}
+            </a>
+          </li>
+          <li>
+            <a
+              className="border-none text-gray-800 hover:text-black"
+              href="https://pantip.com/point"
+            >
+              {t('pantip_point_link')}
             </a>
           </li>
         </>
@@ -56,25 +48,21 @@ export default function Layout(props: { children: React.ReactNode }) {
       rightNav={
         <>
           <li>
-            <Link
-              href="/sign-in/"
+            <a
+              href="https://pantip.com/login"
               className="border-none text-gray-700 hover:text-gray-900"
             >
               {t('sign_in_link')}
-            </Link>
+            </a>
           </li>
 
           <li>
-            <Link
-              href="/sign-up/"
-              className="border-none text-gray-700 hover:text-gray-900"
+            <Button
+              href="https://pantip.com/register/email"
+              className=" rounded-md bg-violet-700 px-4 py-1 text-gray-300 hover:bg-violet-800 hover:text-white"
             >
               {t('sign_up_link')}
-            </Link>
-          </li>
-
-          <li>
-            <LocaleSwitcher />
+            </Button>
           </li>
         </>
       }

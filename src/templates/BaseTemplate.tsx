@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { AppConfig } from '@/utils/AppConfig';
@@ -10,27 +11,18 @@ const BaseTemplate = (props: {
   const t = useTranslations('BaseTemplate');
 
   return (
-    <div className="w-full px-1 text-gray-700 antialiased">
-      <div className="mx-auto max-w-screen-md">
+    <div className="w-full px-8 antialiased">
+      <div className="mx-auto">
         <header className="border-b border-gray-300">
-          <div className="pb-8 pt-16">
-            <h1 className="text-3xl font-bold text-gray-900">
-              {AppConfig.name}
-            </h1>
-            <h2 className="text-xl">{t('description')}</h2>
-          </div>
+          <div className="flex items-center justify-between">
+            <Image width={80} height={0} src="/pantip-logo.png" alt="Pantip" />
 
-          <div className="flex justify-between">
             <nav>
-              <ul className="flex flex-wrap gap-x-5 text-xl">
-                {props.leftNav}
-              </ul>
+              <ul className="flex flex-wrap gap-x-5">{props.leftNav}</ul>
             </nav>
 
             <nav>
-              <ul className="flex flex-wrap gap-x-5 text-xl">
-                {props.rightNav}
-              </ul>
+              <ul className="flex flex-wrap gap-x-5">{props.rightNav}</ul>
             </nav>
           </div>
         </header>
