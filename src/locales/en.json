@@ -87,5 +87,8 @@
   "Realtime": {
     "realtime_title": "Realtime",
     "realtime_desc": "กระทู้ที่มีคนเปิดอ่านมากในขณะนี้"
+  },
+  "PopularTags": {
+    "popular_tags_title": "แท็กฮิต"
   }
 }

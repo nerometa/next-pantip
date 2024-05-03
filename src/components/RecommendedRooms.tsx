@@ -14,7 +14,7 @@ const RecommendedRooms = () => {
 
   return (
     <section id="recommended-rooms" className="mb-16">
-      <h2 className="mb-8 text-2xl font-bold">
+      <h2 className="mb-4 text-2xl font-bold md:mb-8 lg:mb-10">
         {t('recommended_rooms_title')}
       </h2>
       <div className="grid auto-cols-[100px] grid-flow-col grid-rows-[repeat(2,_minmax(0,_100px))] overflow-x-scroll pb-4">

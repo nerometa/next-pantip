@@ -5,6 +5,7 @@ import type {
   RealtimeResponse,
   RoomsResponse,
 } from '@/models/home';
+import type { PopularTagsResponse } from '@/models/home/tags';
 
 export const homeApi = createApi({
   reducerPath: 'home',
@@ -22,6 +23,9 @@ export const homeApi = createApi({
       query: (trackingCode) =>
         `/get_room_recommend?tracking_code=${trackingCode}`,
     }),
+    getPopularTags: builder.query<PopularTagsResponse, number>({
+      query: (limit) => `/get_tag_hit?limit=${limit}`,
+    }),
   }),
 });
 
@@ -37,5 +41,9 @@ export const realtimeApi = createApi({
   }),
 });
 
-export const { useGetHighlightsQuery, useGetRecommendedRoomsQuery } = homeApi;
+export const {
+  useGetHighlightsQuery,
+  useGetRecommendedRoomsQuery,
+  useGetPopularTagsQuery,
+} = homeApi;
 export const { useGetRealtimeQuery } = realtimeApi;

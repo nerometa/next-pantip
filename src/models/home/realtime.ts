@@ -1,3 +1,5 @@
+import type { Tag } from './tags';
+
 export interface RealtimeResponse {
   realtime: Realtime;
 }
@@ -37,9 +39,4 @@ export interface Avatar {
   large: string;
   medium: string;
   small: string;
-}
-
-export interface Tag {
-  name: string;
-  slug: string;
 }

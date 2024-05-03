@@ -14,12 +14,12 @@ const Realtime = () => {
   return (
     <section id="realtime">
       <h2 className="text-2xl font-bold">{t('realtime_title')}</h2>
-      <p className="mb-8 text-sm text-gray-700">{t('realtime_desc')}</p>
-      <ul id="realtime-topics" className="mt-8 lg:grid lg:grid-cols-2 lg:gap-4">
+      <p className="mb:4 text-sm text-gray-700 md:mb-8">{t('realtime_desc')}</p>
+      <ul id="realtime-topics" className="mt-8">
         {realtime.currentData?.realtime.data.map((topic: Topic) => (
           <div
             key={topic.topic_id}
-            className="mb-8 flex flex-col items-center justify-start gap-3 overflow-hidden rounded-xl border border-gray-300 bg-white ease-in-out hover:bg-neutral-200/75 md:flex-row md:p-2 lg:mb-0"
+            className="mb-8 flex flex-col items-center justify-start gap-3 overflow-hidden rounded-xl border border-gray-300 bg-white ease-in-out hover:bg-neutral-200/75 md:flex-row md:p-2 lg:mb-4"
           >
             {topic.thumbnail_url && (
               <div className="relative h-48 w-full shrink-0 md:h-20 md:w-32">

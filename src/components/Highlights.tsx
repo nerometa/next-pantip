@@ -11,7 +11,9 @@ const Highlights = () => {
 
   return (
     <section id="highlight" className="mb-16">
-      <h2 className="mb-8 text-2xl font-bold">{t('highlights_title')}</h2>
+      <h2 className="mb-4 text-2xl font-bold md:mb-8 lg:mb-10">
+        {t('highlights_title')}
+      </h2>
       <div className="flex flex-nowrap items-start gap-8 overflow-x-scroll">
         {highlights.currentData?.data.map((item) => (
           <a

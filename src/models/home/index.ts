@@ -1,4 +1,11 @@
 export * from './highlights';
 export * from './home';
-export * from './realtime';
+export type {
+  Author,
+  Avatar,
+  Realtime,
+  RealtimeResponse,
+  Topic,
+} from './realtime';
 export * from './rooms';
+export * from './tags';

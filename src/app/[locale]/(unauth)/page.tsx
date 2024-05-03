@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import Highlights from '@/components/Highlights';
+import PopularTags from '@/components/PopularTags';
 import Realtime from '@/components/Realtime';
 import RecommendedRooms from '@/components/RecommendedRooms';
 
@@ -21,7 +22,12 @@ export default function Index() {
     <>
       <Highlights />
       <RecommendedRooms />
-      <Realtime />
+      <div className="gap-4 lg:grid lg:grid-cols-3">
+        <div className="col-span-2">
+          <Realtime />
+        </div>
+        <PopularTags />
+      </div>
     </>
   );
 }
