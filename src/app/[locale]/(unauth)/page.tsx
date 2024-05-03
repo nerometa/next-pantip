@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import Highlights from '@/components/Highlights';
+import Realtime from '@/components/Realtime';
 import RecommendedRooms from '@/components/RecommendedRooms';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
@@ -20,6 +21,7 @@ export default function Index() {
     <>
       <Highlights />
       <RecommendedRooms />
+      <Realtime />
     </>
   );
 }

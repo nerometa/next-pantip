@@ -83,5 +83,9 @@
   },
   "RecommendedRooms": {
     "recommended_rooms_title": "เลือกห้อง"
+  },
+  "Realtime": {
+    "realtime_title": "Realtime",
+    "realtime_desc": "กระทู้ที่มีคนเปิดอ่านมากในขณะนี้"
   }
 }

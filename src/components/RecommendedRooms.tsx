@@ -13,7 +13,7 @@ const RecommendedRooms = () => {
   const recommendedRooms = useGetRecommendedRoomsQuery(trackingCode);
 
   return (
-    <section id="recommended-rooms">
+    <section id="recommended-rooms" className="mb-16">
       <h2 className="mb-8 text-2xl font-bold">
         {t('recommended_rooms_title')}
       </h2>

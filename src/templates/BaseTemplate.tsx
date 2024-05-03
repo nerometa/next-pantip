@@ -11,7 +11,7 @@ const BaseTemplate = (props: {
 
   return (
     <>
-      <header className="sticky left-0 top-0 w-full border-b border-gray-300 bg-white p-4 sm:px-8">
+      <header className="sticky left-0 top-0 z-50 w-full border-b border-gray-300 bg-white p-4 sm:px-8">
         <div className="flex items-center justify-between">
           <section id="main-nav" className="flex items-center">
             <a href="/">
