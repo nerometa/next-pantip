@@ -4,6 +4,7 @@ import Highlights from '@/components/Highlights';
 import PopularTags from '@/components/PopularTags';
 import Realtime from '@/components/Realtime';
 import RecommendedRooms from '@/components/RecommendedRooms';
+import SuggestedTopics from '@/components/SuggestedTopics';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
@@ -27,6 +28,9 @@ export default function Index() {
           <Realtime />
         </div>
         <PopularTags />
+        <div className="col-span-2">
+          <SuggestedTopics />
+        </div>
       </div>
     </>
   );

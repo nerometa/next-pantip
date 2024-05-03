@@ -1,6 +1,23 @@
+import type { Tag, Topic } from './shared';
+
 export interface TagsResponse {
   success: boolean;
   data: Tag[];
+}
+
+export type TagTopicResponse = {
+  tag_id: number;
+  tag_name: string;
+  topic_count: number;
+  follow_count: number;
+  is_followed: boolean;
+  slug: string;
+  type: string;
+  topics: TagTopic[];
+};
+
+export interface TagTopic extends Topic {
+  category: string;
 }
 
 export interface PopularTagsResponse extends TagsResponse {
@@ -8,10 +25,6 @@ export interface PopularTagsResponse extends TagsResponse {
   next_id: number;
 }
 
-export interface Tag {
-  name: string;
-  slug: string;
-  pageview: number;
-  topic_count: number;
-  follow_count: number;
+export function instanceOfTagTopic(obj: any): obj is TagTopicResponse {
+  return 'tag_id' in obj;
 }

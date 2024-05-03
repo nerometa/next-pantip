@@ -11,7 +11,7 @@ const BaseTemplate = (props: {
 
   return (
     <>
-      <header className="sticky left-0 top-0 z-50 w-full border-b border-gray-300 bg-white p-4 sm:px-8">
+      <header className="sticky left-0 top-0 z-50 mx-auto w-full max-w-7xl border-b border-gray-300 bg-white p-4 sm:px-8">
         <div className="flex items-center justify-between">
           <section id="main-nav" className="flex items-center">
             <a href="/">
@@ -41,7 +41,7 @@ const BaseTemplate = (props: {
       </header>
 
       <div className="w-full px-4 antialiased sm:px-8">
-        <div className="mx-auto">
+        <div className="mx-auto max-w-7xl">
           <main>{props.children}</main>
 
           <footer className="border-t border-gray-300 py-8 text-sm md:grid md:grid-cols-2 md:grid-rows-2">
@@ -281,7 +281,7 @@ const BaseTemplate = (props: {
                 .
               </p>
 
-              <ul id="tos-privacy" className="flex gap-2">
+              <ul id="tos-privacy" className="gap-2 sm:flex">
                 <li>
                   <a href="https://pantip.com/about/tos">
                     {t('terms_of_service')}

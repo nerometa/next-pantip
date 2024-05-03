@@ -81,7 +81,7 @@ export default function Layout(props: { children: React.ReactNode }) {
               />
             </svg>
           </MenuButton>
-          <Menu className="rounded-md border-slate-300 bg-white p-4 shadow-lg">
+          <Menu className="z-50 rounded-md border-slate-300 bg-white p-4 shadow-lg">
             <section
               id="mobile-nav-signinout"
               className="border-b border-slate-400 pb-2"

@@ -2,10 +2,11 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import type {
   HighlightsResponse,
+  PopularTagsResponse,
   RealtimeResponse,
   RoomsResponse,
 } from '@/models/home';
-import type { PopularTagsResponse } from '@/models/home/tags';
+import type { SuggestedTopicResponse } from '@/models/home/suggested-topics';
 
 export const homeApi = createApi({
   reducerPath: 'home',
@@ -21,11 +22,17 @@ export const homeApi = createApi({
     }),
     getRecommendedRooms: builder.query<RoomsResponse, string>({
       query: (trackingCode) =>
-        `/get_room_recommend?tracking_code=${trackingCode}`,
+        `/get_room_recommend?tracking_code={${trackingCode}}`,
     }),
     getPopularTags: builder.query<PopularTagsResponse, number>({
       query: (limit) => `/get_tag_hit?limit=${limit}`,
     }),
+    getSuggestedTopicsByBehavior: builder.query<SuggestedTopicResponse, string>(
+      {
+        query: (trackingCode) =>
+          `/get_suggest_topic_behavior?tracking_code=${trackingCode}`,
+      },
+    ),
   }),
 });
 
@@ -45,5 +52,6 @@ export const {
   useGetHighlightsQuery,
   useGetRecommendedRoomsQuery,
   useGetPopularTagsQuery,
+  useGetSuggestedTopicsByBehaviorQuery,
 } = homeApi;
 export const { useGetRealtimeQuery } = realtimeApi;

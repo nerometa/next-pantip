@@ -90,5 +90,9 @@
   },
   "PopularTags": {
     "popular_tags_title": "แท็กฮิต"
+  },
+  "SuggestedTopics": {
+    "suggested_topics_title": "For you",
+    "follow": "ติดตาม"
   }
 }
