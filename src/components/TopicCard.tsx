@@ -15,8 +15,7 @@ const TopicCard = ({ topic }: Props) => {
         <div className="relative h-48 w-full shrink-0 md:h-20 md:w-32">
           <Image
             className="absolute left-0 top-0 size-full rounded-xl object-cover object-center transition duration-75"
-            loading="lazy"
-            layout="fill"
+            fill
             src={topic.thumbnail_url}
             alt={topic.title}
           />
@@ -25,7 +24,7 @@ const TopicCard = ({ topic }: Props) => {
 
       <div className="flex w-full flex-col justify-center gap-2 p-2 md:p-0">
         <a
-          className="font-bold ease-in-out hover:text-gray-700"
+          className="font-bold ease-in-out"
           href={`https://www.pantip.com/topic/${topic.topic_id}`}
         >
           {topic.title}

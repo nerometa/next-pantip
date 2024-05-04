@@ -7,10 +7,14 @@ import { useTranslations } from 'next-intl';
 import { useGetRecommendedRoomsQuery } from '@/libs/redux/features/home/homeSlice';
 import type { Room } from '@/models/home';
 
+import RecommendedRoomsSkeleton from './RecommendedRoomsSkeleton';
+
 const RecommendedRooms = () => {
   const trackingCode: string = process.env.NEXT_PUBLIC_PANTIP_TRACKING_CODE!;
   const t = useTranslations('RecommendedRooms');
   const recommendedRooms = useGetRecommendedRoomsQuery(trackingCode);
+
+  if (recommendedRooms.isLoading) return <RecommendedRoomsSkeleton />;
 
   return (
     <section id="recommended-rooms" className="mb-16">

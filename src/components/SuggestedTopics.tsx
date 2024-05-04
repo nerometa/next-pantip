@@ -12,12 +12,15 @@ import type {
   TagTopicResponse,
 } from '@/models/home';
 
+import SuggestedTopicsSkeleton from './SuggestedTopicsSkeleton';
 import TopicCard from './TopicCard';
 
 const SuggestedTopics = () => {
   const trackingCode = process.env.NEXT_PUBLIC_PANTIP_TRACKING_CODE!;
   const t = useTranslations('SuggestedTopics');
   const suggestedTopics = useGetSuggestedTopicsByBehaviorQuery(trackingCode);
+
+  if (suggestedTopics.isLoading) return <SuggestedTopicsSkeleton />;
 
   return (
     <section id="suggested-topics">

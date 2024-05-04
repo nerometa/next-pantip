@@ -5,11 +5,14 @@ import { useTranslations } from 'next-intl';
 import { useGetRealtimeQuery } from '@/libs/redux/features/home/homeSlice';
 import type { Topic } from '@/models/home';
 
+import RealtimeSkeleton from './RealtimeSkeleton';
 import TopicCard from './TopicCard';
 
 const Realtime = () => {
   const t = useTranslations('Realtime');
   const realtime = useGetRealtimeQuery();
+
+  if (realtime.isLoading) return <RealtimeSkeleton />;
 
   return (
     <section id="realtime">

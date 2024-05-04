@@ -4,9 +4,13 @@ import { useTranslations } from 'next-intl';
 
 import { useGetPopularTagsQuery } from '@/libs/redux/features/home/homeSlice';
 
+import PopularTagsSkeleton from './PopularTagsSkeleton';
+
 const PopularTags = () => {
   const tags = useGetPopularTagsQuery(10);
   const t = useTranslations('PopularTags');
+
+  if (tags.isLoading) return <PopularTagsSkeleton />;
 
   return (
     <section id="popular-tags" className="hidden lg:block">

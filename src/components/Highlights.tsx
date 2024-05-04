@@ -5,9 +5,13 @@ import { useTranslations } from 'next-intl';
 
 import { useGetHighlightsQuery } from '@/libs/redux/features/home/homeSlice';
 
+import HighlightSkeleton from './HighlightsSkeleton';
+
 const Highlights = () => {
   const t = useTranslations('Highlights');
   const highlights = useGetHighlightsQuery();
+
+  if (highlights.isLoading) return <HighlightSkeleton />;
 
   return (
     <section id="highlight" className="mb-16">
